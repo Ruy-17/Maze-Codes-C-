@@ -13,16 +13,16 @@ public:
     static void updateLeftEncoder();
     static void updateRightEncoder();
 
-    void resetCounts();  // Declaración del método para reiniciar los contadores
+    void resetCounts();  
 
 private:
-    static Encoders_L* instance;  // Puntero estático a la instancia de la clase
-
+    static Encoders_L* instance;  
     int leftEncPinA, leftEncPinB;
     int rightEncPinA, rightEncPinB;
 
-    static int lastEncodedLeft;  // Variables para los encoders
+    static int lastEncodedLeft; 
     static int lastEncodedRight;
 };
 
 #endif
+
