@@ -11,7 +11,7 @@ Encoders_L::Encoders_L(int leftEncPinA, int leftEncPinB, int rightEncPinA, int r
     pinMode(rightEncPinA, INPUT_PULLUP);
     pinMode(rightEncPinB, INPUT_PULLUP);
 
-    instance = this;  // Asignar la instancia actual al puntero estático
+    instance = this;  
 
     attachInterrupt(digitalPinToInterrupt(leftEncPinA), updateLeftEncoder, CHANGE);
     attachInterrupt(digitalPinToInterrupt(leftEncPinB), updateLeftEncoder, CHANGE);
@@ -55,3 +55,4 @@ void Encoders_L::resetCounts() {
     leftEncoderCount = 0;
     rightEncoderCount = 0;
 }
+
